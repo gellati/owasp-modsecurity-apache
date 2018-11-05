@@ -13,7 +13,4 @@ COPY modsecurity.d/rules/* /etc/httpd/modsecurity.d/rules/
 
 EXPOSE 80
 
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
-#RUN /usr/sbin/httpd -D FOREGROUND
-#RUN httpd -t  # no work
+RUN /usr/sbin/httpd -D FOREGROUND
