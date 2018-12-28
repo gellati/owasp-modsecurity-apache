@@ -6,11 +6,10 @@ RUN yum -y update && \
 
 COPY index.html /var/www/html/
 
-COPY modsecurity.d/crs-setup.conf /etc/httpd/modsecurity.d/
-COPY modsecurity.d/modsecurity.conf /etc/httpd/modsecurity.d/
-COPY modsecurity.d/rules/* /etc/httpd/modsecurity.d/rules/
+COPY conf           /etc/httpd/conf
+COPY conf.d         /etc/httpd/conf.d
+COPY modsecurity.d  /etc/httpd/modsecurity.d
 
 EXPOSE 80
 
-#RUN /usr/sbin/httpd -D FOREGROUND
-RUN httpd -t
+RUN /usr/sbin/httpd -D FOREGROUND
