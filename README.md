@@ -1,6 +1,8 @@
-### Apache server with modsecurity
+# Apache server with modsecurity
 
-This repo hosts files for the attempt to set up an Apache server with ModSecurity in a Docker container.
+This repo hosts files for the attempt to set up an Apache server with ModSecurity in a Docker container. Using [OWASP](https://www.owasp.org/index.php/Main_Page), the [3.0 rule set](https://github.com/SpiderLabs/owasp-modsecurity-crs).
+
+## Setup
 
 Clone the repo and go into the directory.
 
@@ -48,7 +50,7 @@ The sensitivity of ModSecurity to detect an attack can be set by adjusting the `
 
 
 
-# Observations
+## Observations
 
 - make sure modsecurity configuration file is called `mod_security.conf`. Notice the underscore.
 
